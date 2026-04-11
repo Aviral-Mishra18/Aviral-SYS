@@ -33,7 +33,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-6">
             FULLSTACK <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-blue animate-gradient-x">
-              ARCHITECT.
+              DEVELOPER.
             </span>
           </h1>
           

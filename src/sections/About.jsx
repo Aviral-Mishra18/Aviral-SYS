@@ -58,7 +58,7 @@ const About = () => {
                   <span className="text-white">whoami</span>
                 </div>
                 <div className="text-slate-400 leading-relaxed">
-                  I am a digital architect specializing in high-performance web systems. 
+                  I am a digital developer specializing in high-performance web systems. 
                   My journey began in the dark alleys of vanilla JS, evolving through 
                   framework wars to master the art of "Cyber-Visual-Optimization".
                 </div>
