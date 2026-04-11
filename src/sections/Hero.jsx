@@ -25,9 +25,15 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue text-xs font-bold mb-6">
-            <ShieldCheck size={14} />
-            SECURE CONNECTION ESTABLISHED
+          <div className="flex gap-4 mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue text-xs font-bold ring-1 ring-cyber-blue/20">
+              <ShieldCheck size={14} />
+              SECURE_LINK: ACTIVE
+            </div>
+            <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-purple/10 border border-cyber-purple/30 text-cyber-purple text-xs font-bold">
+              <div className="w-1.5 h-1.5 bg-cyber-purple rounded-full animate-pulse"></div>
+              PING: 14ms
+            </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-6">
@@ -42,19 +48,34 @@ const Hero = () => {
           </div>
           
           <p className="text-lg text-slate-400 max-w-lg mb-10 leading-relaxed">
-            Building digital fortresses and interactive experiences. Specialized in 
-            <span className="text-cyber-blue font-bold"> Web Simulation</span>, 
-            <span className="text-cyber-purple font-bold"> Neural Architectures</span>, and 
-            <span className="text-cyber-green font-bold"> Cybernetic UI</span>.
+            Architecting the future of the web with high-performance, scalable solutions. Specialized in 
+            <span className="text-cyber-blue font-bold"> Fullstack Engineering</span>, 
+            <span className="text-cyber-purple font-bold"> Distributed Systems</span>, and 
+            <span className="text-cyber-green font-bold"> Interactive Realities</span>.
           </p>
           
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mb-12">
             <button className="cyber-button flex items-center gap-2">
               EXPLORE_SYSTEM <ChevronRight size={18} />
             </button>
             <button className="px-6 py-2 border border-white/10 hover:border-white/30 transition-all text-white font-bold opacity-70 hover:opacity-100 flex items-center gap-2">
               DOWNLOAD_MANIFEST
             </button>
+          </div>
+
+          <div className="pt-8 border-t border-white/5 flex gap-10">
+            <div>
+              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">Experience_Index</div>
+              <div className="text-xl font-bold text-white font-mono">04+ YEARS</div>
+            </div>
+            <div>
+              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">Nodes_Deployed</div>
+              <div className="text-xl font-bold text-white font-mono">24+ ACTIVE</div>
+            </div>
+            <div className="hidden sm:block">
+              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">Global_Latency</div>
+              <div className="text-xl font-bold text-white font-mono">0.02ms</div>
+            </div>
           </div>
         </motion.div>
 

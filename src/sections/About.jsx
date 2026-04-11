@@ -58,26 +58,26 @@ const About = () => {
                   <span className="text-white">whoami</span>
                 </div>
                 <div className="text-slate-400 leading-relaxed">
-                  I am a digital developer specializing in high-performance web systems. 
-                  My journey began in the dark alleys of vanilla JS, evolving through 
-                  framework wars to master the art of "Cyber-Visual-Optimization".
+                  I am a dedicated Fullstack Developer with a passion for creating efficient, scalable, and user-centric digital solutions. 
+                  Experienced in modern web architectures, I specialize in bridging the gap between complex technical requirements and 
+                  intuitive interface design.
                 </div>
                 <div className="flex gap-2 pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <span className="text-white">cat interests.txt</span>
+                  <span className="text-white">cat expertise.json</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-cyber-blue/70">
-                  <span>- Neural Graphics</span>
-                  <span>- Cloud Fortification</span>
-                  <span>- Interactive Simulators</span>
-                  <span>- Low-Latency Systems</span>
+                  <span>- Scalable Web Apps</span>
+                  <span>- System Architecture</span>
+                  <span>- Cloud Optimization</span>
+                  <span>- Performance Engineering</span>
                 </div>
                 <div className="flex gap-2 pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <span className="text-white">run manifest.sh</span>
+                  <span className="text-white">run mission_statement.sh</span>
                 </div>
                 <div className="text-slate-400 italic">
-                  "The gap between imagination and reality is just a few thousand lines of code."
+                  "Excellence is not a skill, it's an attitude. I build software that stands the test of time and scale."
                 </div>
                 <div className="flex gap-1 animate-pulse">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
