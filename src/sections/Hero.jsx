@@ -65,16 +65,16 @@ const Hero = () => {
 
           <div className="pt-8 border-t border-white/5 flex gap-10">
             <div>
-              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">Experience_Index</div>
-              <div className="text-xl font-bold text-white font-mono">04+ YEARS</div>
+              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">System_Status</div>
+              <div className="text-xl font-bold text-cyber-blue font-mono">FRESHER</div>
             </div>
             <div>
-              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">Nodes_Deployed</div>
-              <div className="text-xl font-bold text-white font-mono">24+ ACTIVE</div>
+              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">Labs_Completed</div>
+              <div className="text-xl font-bold text-white font-mono">12+ UNITS</div>
             </div>
             <div className="hidden sm:block">
-              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">Global_Latency</div>
-              <div className="text-xl font-bold text-white font-mono">0.02ms</div>
+              <div className="text-[10px] font-mono text-slate-500 uppercase mb-1 tracking-widest">Git_Commits</div>
+              <div className="text-xl font-bold text-white font-mono">250+</div>
             </div>
           </div>
         </motion.div>
