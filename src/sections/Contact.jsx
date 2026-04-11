@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-4">
+            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-4" style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em' }}>
               <span className="text-cyber-blue">05.</span> CONTACT_CHANNEL
             </h2>
             <p className="text-slate-400 mb-10 font-mono text-sm leading-relaxed">

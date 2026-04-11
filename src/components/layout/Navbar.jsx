@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="w-10 h-10 bg-cyber-blue/20 border border-cyber-blue flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(0,242,255,0.5)] transition-all">
             <Terminal className="text-cyber-blue w-6 h-6" />
           </div>
-          <span className="font-bold text-xl tracking-tighter text-white">
+          <span className="font-extrabold text-xl tracking-[-0.04em] text-white" style={{ fontFamily: 'var(--font-heading)' }}>
             AVIRAL<span className="text-cyber-blue">.SYS</span>
           </span>
         </motion.div>
@@ -51,7 +51,8 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="text-xs font-bold tracking-widest hover:text-cyber-blue transition-colors relative group"
+              className="font-bold hover:text-cyber-blue transition-colors relative group"
+              style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', letterSpacing: '0.12em' }}
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyber-blue transition-all group-hover:w-full"></span>

@@ -104,7 +104,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-4">
+            <h2 className="text-3xl font-bold text-white mb-4 flex items-center gap-4" style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em' }}>
               <span className="text-cyber-blue">02.</span> PROJECTS_LAB
             </h2>
             <p className="text-slate-400 max-w-md font-mono text-sm">

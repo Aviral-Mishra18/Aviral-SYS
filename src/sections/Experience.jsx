@@ -26,7 +26,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-32 relative">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-white mb-16 flex items-center gap-4">
+        <h2 className="text-3xl font-bold text-white mb-16 flex items-center gap-4" style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em' }}>
           <span className="text-cyber-blue">04.</span> EXPERIENCE_LOGS
         </h2>
 

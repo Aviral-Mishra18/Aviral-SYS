@@ -5,14 +5,14 @@ const Terminal = ({ children, title = "guest@aviral-sys:~" }) => {
   return (
     <div className="terminal-window w-full">
       <div className="terminal-header">
-        <span className="text-[10px] font-mono text-cyber-blue font-bold tracking-widest">{title}</span>
+        <span className="font-bold tracking-widest" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem' }}>{title}</span>
         <div className="flex gap-1.5">
           <div className="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
           <div className="w-2.5 h-2.5 rounded-full bg-green-500/50"></div>
         </div>
       </div>
-      <div className="p-6 font-mono text-sm overflow-hidden">
+      <div className="p-6 text-sm overflow-hidden" style={{ fontFamily: 'var(--font-mono)' }}>
         {children}
       </div>
     </div>
@@ -46,7 +46,7 @@ const About = () => {
           </motion.div>
 
           <div>
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-4">
+            <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-4" style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em' }}>
               <span className="text-cyber-blue">01.</span> ABOUT.EXE
               <div className="flex-1 h-px bg-gradient-to-r from-cyber-blue/30 to-transparent"></div>
             </h2>
@@ -57,7 +57,7 @@ const About = () => {
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
                   <span className="text-white">whoami</span>
                 </div>
-                <div className="text-slate-400 leading-relaxed">
+                <div className="text-slate-400 leading-[1.75]" style={{ fontFamily: 'var(--font-body)' }}>
                   Senior Frontend Developer with 5+ years of experience building performant, 
                   accessible, and scalable web applications. I turn complex designs into clean, 
                   maintainable code that teams love to work with.
