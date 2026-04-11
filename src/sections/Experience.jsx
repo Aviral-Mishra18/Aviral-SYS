@@ -4,22 +4,22 @@ import { motion } from 'framer-motion';
 const Experience = () => {
   const experiences = [
     {
-      year: "2024-PRESENT",
-      role: "FULLSTACK_LAB_RESEARCH",
-      company: "SELF_INITIATED",
-      tasks: ["Building end-to-end scalable web applications", "Mastering React, Node.js and Cloud Infrastructure", "Implementing security best practices in personal projects"]
+      year: "2023-PRESENT",
+      role: "LEAD_FRONTEND_ENGINEER",
+      company: "TECH_CORP",
+      tasks: ["Architecting design systems used by 50+ developers", "Leading migration from legacy jQuery to React 18 + TypeScript", "Reduced bundle size by 40% with code-splitting & lazy loading"]
     },
     {
-      year: "2023-2024",
-      role: "OPEN_SOURCE_CONTRIBUTOR",
-      company: "GITHUB_COMMUNITY",
-      tasks: ["Contributing to modern UI component libraries", "Participating in global coding challenges", "Collaborating on developer tools and documentation"]
+      year: "2021-2023",
+      role: "SENIOR_FRONTEND_DEV",
+      company: "STARTUP_LABS",
+      tasks: ["Built real-time dashboard serving 10k+ concurrent users", "Implemented CI/CD pipelines with automated visual regression testing", "Mentored junior developers and conducted code reviews"]
     },
     {
-      year: "2020-2024",
-      role: "TECHNICAL_GRADUATION",
-      company: "UNIVERSITY_SYSTEMS",
-      tasks: ["Developed 8+ academic software projects", "Deep-dived into Computer Science fundamentals", "Led technical university workshops"]
+      year: "2019-2021",
+      role: "FRONTEND_DEVELOPER",
+      company: "DIGITAL_AGENCY",
+      tasks: ["Delivered 20+ pixel-perfect responsive web applications", "Integrated REST & GraphQL APIs with custom React hooks", "Optimized Core Web Vitals achieving 95+ Lighthouse scores"]
     }
   ];
 
@@ -27,7 +27,7 @@ const Experience = () => {
     <section id="experience" className="py-32 relative">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-white mb-16 flex items-center gap-4">
-          <span className="text-cyber-blue">04.</span> SYSTEM_EVOLUTION
+          <span className="text-cyber-blue">04.</span> EXPERIENCE_LOGS
         </h2>
 
         <div className="space-y-12 relative before:absolute before:left-[11px] before:top-2 before:bottom-0 before:w-px before:bg-cyber-blue/20">

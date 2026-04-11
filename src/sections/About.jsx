@@ -58,26 +58,26 @@ const About = () => {
                   <span className="text-white">whoami</span>
                 </div>
                 <div className="text-slate-400 leading-relaxed">
-                  I am a dedicated Fullstack Developer with a passion for creating efficient, scalable, and user-centric digital solutions. 
-                  Experienced in modern web architectures, I specialize in bridging the gap between complex technical requirements and 
-                  intuitive interface design.
+                  Senior Frontend Developer with 5+ years of experience building performant, 
+                  accessible, and scalable web applications. I turn complex designs into clean, 
+                  maintainable code that teams love to work with.
                 </div>
                 <div className="flex gap-2 pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <span className="text-white">cat expertise.json</span>
+                  <span className="text-white">cat tech_stack.json</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-cyber-blue/70">
-                  <span>- Scalable Web Apps</span>
-                  <span>- System Architecture</span>
-                  <span>- Cloud Optimization</span>
-                  <span>- Performance Engineering</span>
+                  <span>- React / Next.js</span>
+                  <span>- TypeScript</span>
+                  <span>- Tailwind / CSS-in-JS</span>
+                  <span>- Node.js / Express</span>
                 </div>
                 <div className="flex gap-2 pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <span className="text-white">run mission_statement.sh</span>
+                  <span className="text-white">echo $PHILOSOPHY</span>
                 </div>
                 <div className="text-slate-400 italic">
-                  "Excellence is not a skill, it's an attitude. I build software that stands the test of time and scale."
+                  "Great frontend is invisible — users don't notice it, they just feel it."
                 </div>
                 <div className="flex gap-1 animate-pulse">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
