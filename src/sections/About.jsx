@@ -29,20 +29,47 @@ const About = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="relative"
           >
-            <div className="relative group grayscale hover:grayscale-0 transition-all duration-700">
-               {/* Use generate_image later for proper photo placeholders if needed, but for now I'll use a stylized div */}
-               <div className="w-full aspect-square bg-gradient-to-br from-cyber-blue/20 to-cyber-purple/20 border-2 border-cyber-blue/30 relative overflow-hidden flex items-center justify-center">
-                  <div className="absolute inset-0 bg-cyber-grid opacity-30"></div>
-                  <div className="text-8xl font-black text-white/10 select-none">WHOAMI</div>
-                  {/* Decorative corner lines */}
-                  <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-cyber-blue"></div>
-                  <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-cyber-purple"></div>
+            <div className="relative group grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden rounded-sm border border-cyber-blue/20">
+               {/* Main Profile Image */}
+               <div className="w-full aspect-square relative bg-black flex items-center justify-center">
+                  <img 
+                    src="/cyber_profile_avatar_1775934274052.png" 
+                    alt="Digital Identity" 
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                  />
+                  
+                  {/* Scanning Line Animation */}
+                  <motion.div 
+                    animate={{ top: ['0%', '100%', '0%'] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                    className="absolute left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyber-blue/50 to-transparent z-20 shadow-[0_0_15px_rgba(0,242,255,0.5)]"
+                  />
+
+                  {/* Matrix/Grid Overlay */}
+                  <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
+                  
+                  {/* Technical Overlay Graphics */}
+                  <div className="absolute top-4 left-4 flex gap-1">
+                    <div className="w-1 h-3 bg-cyber-blue animate-pulse"></div>
+                    <div className="w-1 h-3 bg-cyber-blue/50"></div>
+                    <div className="w-1 h-3 bg-cyber-blue/20"></div>
+                  </div>
                </div>
+
                {/* Floating Data Tags */}
-               <div className="absolute top-10 -right-4 bg-cyber-blue text-black text-[10px] font-bold px-2 py-1 rotate-12">STATUS: ACTIVE</div>
-               <div className="absolute bottom-10 -left-6 bg-cyber-purple text-white text-[10px] font-bold px-2 py-1 -rotate-12">CLASS: FULLSTACK</div>
+               <div className="absolute top-12 -right-4 bg-cyber-blue text-black text-[9px] font-black px-3 py-1 rotate-12 shadow-[5px_5px_0px_rgba(0,0,0,0.5)] z-30">
+                 IDENTITY_SYNC: 100%
+               </div>
+               <div className="absolute bottom-12 -left-6 bg-cyber-purple text-white text-[9px] font-black px-3 py-1 -rotate-12 shadow-[5px_5px_0px_rgba(0,0,0,0.5)] z-30 tracking-widest">
+                 CORE_LOGIC: STABLE
+               </div>
             </div>
+
+            {/* Background Decorative Rings */}
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-cyber-blue/5 rounded-full animate-[spin_20s_linear_infinite]"></div>
+            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-cyber-purple/5 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
           </motion.div>
 
           <div>
@@ -58,30 +85,60 @@ const About = () => {
                   <span className="text-white">whoami</span>
                 </div>
                 <div className="text-slate-400 leading-[1.75]" style={{ fontFamily: 'var(--font-body)' }}>
-                  Senior Frontend Developer with 5+ years of experience building performant, 
-                  accessible, and scalable web applications. I turn complex designs into clean, 
-                  maintainable code that teams love to work with.
+                  Passionate <span className="text-white font-semibold italic">Fullstack Developer</span> and 
+                  <span className="text-cyber-blue font-semibold"> Fresher</span> dedicated to building 
+                  high-performance digital systems. I specialize in bridging the gap between clean 
+                  architecture and cinematic user interfaces.
                 </div>
+
                 <div className="flex gap-2 pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <span className="text-white">cat tech_stack.json</span>
+                  <span className="text-white">access technical_matrix.json</span>
                 </div>
-                <div className="grid grid-cols-2 gap-2 text-cyber-blue/70">
-                  <span>- React / Next.js</span>
-                  <span>- TypeScript</span>
-                  <span>- Tailwind / CSS-in-JS</span>
-                  <span>- Node.js / Express</span>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+                  <div>
+                    <div className="text-cyber-purple font-bold text-[10px] uppercase mb-1 tracking-widest opacity-80">Languages</div>
+                    <div className="grid grid-cols-1 gap-1 text-cyber-blue/80 text-[13px]">
+                      <span>▸ C / C++ / Python</span>
+                      <span>▸ JavaScript (ES6+)</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-cyber-purple font-bold text-[10px] uppercase mb-1 tracking-widest opacity-80">Frontend_Core</div>
+                    <div className="grid grid-cols-1 gap-1 text-cyber-blue/80 text-[13px]">
+                      <span>▸ React / Tailwind CSS</span>
+                      <span>▸ GSAP / Framer Motion</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-cyber-purple font-bold text-[10px] uppercase mb-1 tracking-widest opacity-80">System_Backend</div>
+                    <div className="grid grid-cols-1 gap-1 text-cyber-blue/80 text-[13px]">
+                      <span>▸ Node.js / Express</span>
+                      <span>▸ MongoDB / NoSQL</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-cyber-purple font-bold text-[10px] uppercase mb-1 tracking-widest opacity-80">Preferred_Tools</div>
+                    <div className="grid grid-cols-1 gap-1 text-cyber-blue/80 text-[13px]">
+                      <span>▸ Cursor AI / VS Code</span>
+                      <span>▸ Git / Github Desktop</span>
+                    </div>
+                  </div>
                 </div>
+
                 <div className="flex gap-2 pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
                   <span className="text-white">echo $PHILOSOPHY</span>
                 </div>
-                <div className="text-slate-400 italic">
-                  "Great frontend is invisible — users don't notice it, they just feel it."
+                <div className="text-slate-400 italic text-[13px] border-l-2 border-white/10 pl-3">
+                  "Writing code is about creating systems that solve problems while feeling 
+                  effortless to the user."
                 </div>
-                <div className="flex gap-1 animate-pulse">
+                
+                <div className="flex gap-1 animate-pulse pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <div className="w-2 h-4 bg-cyber-blue"></div>
+                  <div className="w-2.5 h-4 bg-cyber-blue shadow-[0_0_10px_rgba(0,242,255,0.7)]"></div>
                 </div>
               </div>
             </Terminal>

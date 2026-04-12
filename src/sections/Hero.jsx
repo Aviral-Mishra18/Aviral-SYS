@@ -56,14 +56,14 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* Status Badges */}
-          <div className="flex flex-wrap gap-2.5 mb-5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue font-bold ring-1 ring-cyber-blue/10" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', letterSpacing: '0.08em' }}>
-              <ShieldCheck size={12} />
-              SECURE_LINK: ACTIVE
+          <div className="flex flex-wrap gap-3 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue font-bold ring-1 ring-cyber-blue/10" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', letterSpacing: '0.1em' }}>
+              <ShieldCheck size={12} className="animate-pulse" />
+              SECURE_ACCESS: GRANTED
             </div>
-            <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-purple/10 border border-cyber-purple/30 text-cyber-purple font-bold" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', letterSpacing: '0.08em' }}>
-              <div className="w-1.5 h-1.5 bg-cyber-purple rounded-full animate-pulse"></div>
-              UPTIME: 99.9%
+            <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-purple/10 border border-cyber-purple/30 text-cyber-purple font-bold" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', letterSpacing: '0.1em' }}>
+              <div className="w-1.5 h-1.5 bg-cyber-purple rounded-full animate-glow-pulse"></div>
+              SYSTEM_LATENCY: 14MS
             </div>
           </div>
 
@@ -97,10 +97,43 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="max-w-lg mb-8 space-y-1" style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-            <span className="block text-neon-pink font-bold">Building production-grade web applications with clean architecture.</span>
-            <span className="block text-cyber-blue font-bold">Specialized in React & Node.js backends.</span>
-            <span className="block"><span className="text-cyber-purple font-bold">MongoDB data layers and,</span> <span className="text-cyber-green font-bold">JWT auth systems from idea to deployment.</span></span>
+          <div className="max-w-2xl mb-10 space-y-5">
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8 }}
+              className="group relative border-l-2 border-cyber-blue/30 hover:border-cyber-blue transition-all duration-300 pl-5 py-0.5"
+            >
+              <p className="text-lg md:text-xl text-slate-400 group-hover:text-slate-100 transition-colors leading-relaxed">
+                Building <span className="text-white font-semibold">production-grade</span> web applications with
+                <span className="text-cyber-blue font-bold mx-1.5 uppercase tracking-tighter text-base md:text-lg">clean architecture</span>
+                and robust algorithmic logic.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1 }}
+              className="group relative border-l-2 border-cyber-purple/30 hover:border-cyber-purple transition-all duration-300 pl-5 py-0.5"
+            >
+              <p className="text-lg md:text-xl text-slate-400 group-hover:text-slate-100 transition-colors leading-relaxed">
+                Specialized in <span className="text-cyber-blue font-bold mx-1.5 uppercase tracking-tighter text-base md:text-lg">React ecosystems</span>
+                and high-performance <span className="text-cyber-purple font-bold mx-1.5 uppercase tracking-tighter text-base md:text-lg">Node.js backends</span>.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.2 }}
+              className="group relative border-l-2 border-cyber-green/30 hover:border-cyber-green transition-all duration-300 pl-5 py-0.5"
+            >
+              <p className="text-lg md:text-xl text-slate-400 group-hover:text-slate-100 transition-colors leading-relaxed">
+                Implementing <span className="text-cyber-green font-bold mx-1.5 uppercase tracking-tighter text-base md:text-lg">MongoDB</span>
+                data layers and <span className="text-white font-semibold">JWT auth systems</span> from concept to global deployment.
+              </p>
+            </motion.div>
           </div>
 
           {/* CTAs */}
@@ -123,18 +156,21 @@ const Hero = () => {
           </div>
 
           {/* Metric Strip */}
-          <div className="pt-6 border-t border-white/5 grid grid-cols-3 gap-4">
-            <div>
-              <div className="mono-label text-slate-500 mb-1">Career_Level</div>
-              <div className="text-base font-bold text-cyber-blue" style={{ fontFamily: 'var(--font-heading)' }}>FRESHER</div>
+          <div className="pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-8">
+            <div className="relative">
+              <div className="mono-label text-slate-500 mb-2">EXPERIENCE_INDEX</div>
+              <div className="text-xl font-bold text-cyber-blue font-heading tracking-tight">FRESHER_DEEPCORE</div>
+              <div className="absolute -left-2 top-0 w-0.5 h-full bg-cyber-blue/20"></div>
             </div>
-            <div>
-              <div className="mono-label text-slate-500 mb-1">Projects_Shipped</div>
-              <div className="text-base font-bold text-white" style={{ fontFamily: 'var(--font-heading)' }}>15+</div>
+            <div className="relative">
+              <div className="mono-label text-slate-500 mb-2">PROJECTS_V_SHIPPED</div>
+              <div className="text-xl font-bold text-white font-heading tracking-tight">15_STABLE_BUILDS</div>
+              <div className="absolute -left-2 top-0 w-0.5 h-full bg-white/10"></div>
             </div>
-            <div>
-              <div className="mono-label text-slate-500 mb-1">Stack_Depth</div>
-              <div className="text-base font-bold text-white" style={{ fontFamily: 'var(--font-heading)' }}>FULLSTACK</div>
+            <div className="relative hidden sm:block">
+              <div className="mono-label text-slate-500 mb-2">COGNITIVE_ARRAY</div>
+              <div className="text-xl font-bold text-white font-heading tracking-tight">FULLSTACK.mjs</div>
+              <div className="absolute -left-2 top-0 w-0.5 h-full bg-white/10"></div>
             </div>
           </div>
         </motion.div>

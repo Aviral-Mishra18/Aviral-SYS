@@ -22,11 +22,9 @@ const Skills = () => {
   const skills = [
     { name: "Frontend", icon: Globe, color: "cyber-blue" },
     { name: "Backend", icon: Database, color: "cyber-purple" },
-    { name: "DevOps", icon: Zap, color: "cyber-green" },
-    { name: "Security", icon: Shield, color: "cyber-rose" },
-    { name: "AI/ML", icon: Cpu, color: "cyber-yellow" },
-    { name: "UI/UX", icon: Layers, color: "cyber-blue" },
-    { name: "CLI", icon: Terminal, color: "cyber-green" },
+    { name: "Algorithms", icon: Cpu, color: "cyber-yellow" },
+    { name: "Architecture", icon: Layers, color: "cyber-blue" },
+    { name: "CLI_Tools", icon: Terminal, color: "cyber-green" },
     { name: "Scripting", icon: Code2, color: "cyber-purple" },
   ];
 
@@ -40,10 +38,10 @@ const Skills = () => {
           <h2 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em' }}>
             <span className="text-cyber-blue">03.</span> SKILLS_MATRIX
           </h2>
-          <p className="text-slate-400 text-sm uppercase" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', letterSpacing: '0.1em' }}>System Capacities & Operational Expertise</p>
+          <p className="text-slate-400 text-sm uppercase" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', letterSpacing: '0.1em' }}>Core technical stack & operational capacities</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto px-4">
           {skills.map((skill, i) => (
             <SkillIcon 
               key={skill.name} 
@@ -55,10 +53,10 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="mt-24 p-8 glass-card border-cyber-blue/20 max-w-3xl mx-auto relative group overflow-hidden">
-          <div className="absolute top-0 right-0 p-2 text-[8px] font-mono text-cyber-blue/30 uppercase tracking-widest">Core_Stack_v2.4</div>
-          <div className="flex items-center gap-6 flex-wrap justify-center opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
-            {['REACT', 'NEXT.JS', 'TAILWIND', 'TYPESCRIPT', 'NODE.JS', 'DOCKER', 'POSTGRES', 'REDIS'].map(tech => (
+        <div className="mt-24 p-8 glass-card border-white/5 max-w-3xl mx-auto relative group overflow-hidden">
+          <div className="absolute top-0 right-0 p-2 text-[8px] font-mono text-cyber-blue/40 uppercase tracking-widest">System_Stack_v1.0</div>
+          <div className="flex items-center gap-6 flex-wrap justify-center opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+            {['C++', 'PYTHON', 'JAVASCRIPT', 'REACT', 'GSAP', 'TAILWIND', 'NODE.JS', 'MONGODB', 'VSCODE', 'CURSOR'].map(tech => (
               <span key={tech} className="text-sm font-black tracking-tighter text-white">{tech}</span>
             ))}
           </div>
