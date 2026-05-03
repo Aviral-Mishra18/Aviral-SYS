@@ -40,11 +40,21 @@ const TerminalLine = ({ prefix, command, delay = 0 }) => {
 };
 
 const Hero = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   const terminalLines = [
     { prefix: "~/aviral $", command: "building fullstack apps...", delay: 600 },
     { prefix: "~/aviral $", command: "deploying scalable systems...", delay: 2400 },
     { prefix: "~/aviral $", command: "ready to ship production code ✓", delay: 4200 },
   ];
+
+  const popupData = {
+    role: "FULLSTACK DEVELOPER",
+    status: "ACTIVE",
+    clearance: "LEVEL_5",
+    stack: ["React", "Node.js", "MongoDB", "Python", "C++", "Tailwind"],
+    uptime: "99.9%",
+  };
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
@@ -67,15 +77,114 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="leading-[0.92] tracking-[-0.04em] mb-5" style={{ fontFamily: 'var(--font-heading)' }}>
-            <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-blue animate-gradient-x">
-              FRONTEND
-            </span>
-            <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mt-1">
-              DEVELOPER<span className="text-cyber-blue">.</span>
-            </span>
-          </h1>
+          {/* Main Heading with Popup */}
+          <div className="relative inline-block">
+            <h1
+              className="leading-[0.92] tracking-[-0.04em] mb-5 cursor-pointer heading-popup-trigger"
+              style={{ fontFamily: 'var(--font-heading)' }}
+              onMouseEnter={() => setShowPopup(true)}
+              onMouseLeave={() => setShowPopup(false)}
+              onClick={() => setShowPopup(prev => !prev)}
+            >
+              <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-blue animate-gradient-x">
+                FULLSTACK
+              </span>
+              <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mt-1">
+                DEVELOPER<span className="text-cyber-blue">.</span>
+              </span>
+            </h1>
+
+            {/* Popup Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 15, scale: 0.92 }}
+              animate={showPopup
+                ? { opacity: 1, y: 0, scale: 1 }
+                : { opacity: 0, y: 15, scale: 0.92 }
+              }
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute left-0 top-full mt-2 z-50 pointer-events-none"
+              style={{ pointerEvents: showPopup ? 'auto' : 'none' }}
+            >
+              <div className="relative w-[340px] sm:w-[400px] bg-black/90 backdrop-blur-xl border border-cyber-blue/40 rounded-lg overflow-hidden shadow-[0_0_40px_rgba(0,242,255,0.15)]">
+                {/* Scanline overlay */}
+                <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,242,255,0.03)_2px,rgba(0,242,255,0.03)_4px)] pointer-events-none z-10"></div>
+
+                {/* Header */}
+                <div className="flex items-center justify-between px-4 py-2.5 border-b border-cyber-blue/20 bg-cyber-blue/5">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-cyber-green animate-pulse"></div>
+                    <span className="text-cyber-blue font-bold" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', letterSpacing: '0.12em' }}>
+                      PROFILE_CARD.exe
+                    </span>
+                  </div>
+                  <span className="text-cyber-green font-bold" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.08em' }}>
+                    ● ONLINE
+                  </span>
+                </div>
+
+                {/* Body */}
+                <div className="px-4 py-3.5 space-y-3">
+                  {/* Role */}
+                  <div>
+                    <div className="text-slate-500 mb-1" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.1em' }}>
+                      DESIGNATION
+                    </div>
+                    <div className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue to-cyber-purple" style={{ fontFamily: 'var(--font-heading)' }}>
+                      {popupData.role}
+                    </div>
+                  </div>
+
+                  {/* Stats Row */}
+                  <div className="grid grid-cols-3 gap-3">
+                    <div className="bg-white/5 rounded-md p-2 border border-white/5">
+                      <div className="text-slate-500 mb-0.5" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5rem', letterSpacing: '0.08em' }}>STATUS</div>
+                      <div className="text-cyber-green font-bold text-xs" style={{ fontFamily: 'var(--font-mono)' }}>{popupData.status}</div>
+                    </div>
+                    <div className="bg-white/5 rounded-md p-2 border border-white/5">
+                      <div className="text-slate-500 mb-0.5" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5rem', letterSpacing: '0.08em' }}>CLEARANCE</div>
+                      <div className="text-cyber-purple font-bold text-xs" style={{ fontFamily: 'var(--font-mono)' }}>{popupData.clearance}</div>
+                    </div>
+                    <div className="bg-white/5 rounded-md p-2 border border-white/5">
+                      <div className="text-slate-500 mb-0.5" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5rem', letterSpacing: '0.08em' }}>UPTIME</div>
+                      <div className="text-cyber-blue font-bold text-xs" style={{ fontFamily: 'var(--font-mono)' }}>{popupData.uptime}</div>
+                    </div>
+                  </div>
+
+                  {/* Tech Stack Tags */}
+                  <div>
+                    <div className="text-slate-500 mb-1.5" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.1em' }}>
+                      LOADED_MODULES
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {popupData.stack.map((tech, i) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-0.5 text-xs font-semibold rounded border transition-colors duration-300"
+                          style={{
+                            fontFamily: 'var(--font-mono)',
+                            fontSize: '0.6rem',
+                            color: i % 3 === 0 ? '#00f2ff' : i % 3 === 1 ? '#bc13fe' : '#00ff9f',
+                            borderColor: i % 3 === 0 ? 'rgba(0,242,255,0.3)' : i % 3 === 1 ? 'rgba(188,19,254,0.3)' : 'rgba(0,255,159,0.3)',
+                            backgroundColor: i % 3 === 0 ? 'rgba(0,242,255,0.08)' : i % 3 === 1 ? 'rgba(188,19,254,0.08)' : 'rgba(0,255,159,0.08)',
+                          }}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="px-4 py-2 border-t border-white/5 bg-white/[0.02]">
+                  <div className="text-slate-600 flex items-center gap-1.5" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.5rem', letterSpacing: '0.08em' }}>
+                    <span className="inline-block w-1 h-1 bg-cyber-blue/50 rounded-full"></span>
+                    HOVER_TO_INSPECT // CLICK_TO_TOGGLE
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
 
           {/* Terminal Typewriter Block */}
           <div className="mb-6 p-3.5 bg-black/70 border border-white/10 rounded-lg backdrop-blur-sm">
@@ -119,7 +228,7 @@ const Hero = () => {
             >
               <p className="text-lg md:text-xl text-slate-400 group-hover:text-slate-100 transition-colors leading-relaxed">
                 Specialized in <span className="text-cyber-blue font-bold mx-1.5 uppercase tracking-tighter text-base md:text-lg">React ecosystems</span>
-                and high-performance <span className="text-cyber-purple font-bold mx-1.5 uppercase tracking-tighter text-base md:text-lg">Node.js backends</span>.
+                and high-performance <span className="text-cyber-purple font-bold mx-1.5 uppercase tracking-tighter text-base md:text-lg">Node.js & Express.js backends</span>.
               </p>
             </motion.div>
 
@@ -164,7 +273,7 @@ const Hero = () => {
             </div>
             <div className="relative">
               <div className="mono-label text-slate-500 mb-2">PROJECTS_V_SHIPPED</div>
-              <div className="text-xl font-bold text-white font-heading tracking-tight">15_STABLE_BUILDS</div>
+              <div className="text-xl font-bold text-white font-heading tracking-tight">5_STABLE_BUILDS</div>
               <div className="absolute -left-2 top-0 w-0.5 h-full bg-white/10"></div>
             </div>
             <div className="relative hidden sm:block">

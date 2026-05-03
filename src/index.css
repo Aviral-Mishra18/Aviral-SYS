@@ -142,6 +142,30 @@
   background: rgba(0, 242, 255, 0.5);
 }
 
+/* Heading Popup Trigger */
+.heading-popup-trigger {
+  position: relative;
+  transition: filter 0.3s ease;
+}
+.heading-popup-trigger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00f2ff, #bc13fe);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 1px;
+  box-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
+}
+.heading-popup-trigger:hover::after {
+  width: 100%;
+}
+.heading-popup-trigger:hover {
+  filter: drop-shadow(0 0 12px rgba(0, 242, 255, 0.25));
+}
+
 /* Utilities */
 .animate-gradient-x {
   background-size: 200% auto;

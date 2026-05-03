@@ -32,39 +32,39 @@ const About = () => {
             className="relative"
           >
             <div className="relative group grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden rounded-sm border border-cyber-blue/20">
-               {/* Main Profile Image */}
-               <div className="w-full aspect-square relative bg-black flex items-center justify-center">
-                  <img 
-                    src="/cyber_profile_avatar_1775934274052.png" 
-                    alt="Digital Identity" 
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
-                  />
-                  
-                  {/* Scanning Line Animation */}
-                  <motion.div 
-                    animate={{ top: ['0%', '100%', '0%'] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyber-blue/50 to-transparent z-20 shadow-[0_0_15px_rgba(0,242,255,0.5)]"
-                  />
+              {/* Main Profile Image */}
+              <div className="w-full aspect-square relative bg-black flex items-center justify-center">
+                <img
+                  src="/cyber_profile_avatar_1775934274052.png"
+                  alt="Digital Identity"
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                />
 
-                  {/* Matrix/Grid Overlay */}
-                  <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
-                  
-                  {/* Technical Overlay Graphics */}
-                  <div className="absolute top-4 left-4 flex gap-1">
-                    <div className="w-1 h-3 bg-cyber-blue animate-pulse"></div>
-                    <div className="w-1 h-3 bg-cyber-blue/50"></div>
-                    <div className="w-1 h-3 bg-cyber-blue/20"></div>
-                  </div>
-               </div>
+                {/* Scanning Line Animation */}
+                <motion.div
+                  animate={{ top: ['0%', '100%', '0%'] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                  className="absolute left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyber-blue/50 to-transparent z-20 shadow-[0_0_15px_rgba(0,242,255,0.5)]"
+                />
 
-               {/* Floating Data Tags */}
-               <div className="absolute top-12 -right-4 bg-cyber-blue text-black text-[9px] font-black px-3 py-1 rotate-12 shadow-[5px_5px_0px_rgba(0,0,0,0.5)] z-30">
-                 IDENTITY_SYNC: 100%
-               </div>
-               <div className="absolute bottom-12 -left-6 bg-cyber-purple text-white text-[9px] font-black px-3 py-1 -rotate-12 shadow-[5px_5px_0px_rgba(0,0,0,0.5)] z-30 tracking-widest">
-                 CORE_LOGIC: STABLE
-               </div>
+                {/* Matrix/Grid Overlay */}
+                <div className="absolute inset-0 bg-cyber-grid opacity-20 pointer-events-none"></div>
+
+                {/* Technical Overlay Graphics */}
+                <div className="absolute top-4 left-4 flex gap-1">
+                  <div className="w-1 h-3 bg-cyber-blue animate-pulse"></div>
+                  <div className="w-1 h-3 bg-cyber-blue/50"></div>
+                  <div className="w-1 h-3 bg-cyber-blue/20"></div>
+                </div>
+              </div>
+
+              {/* Floating Data Tags */}
+              <div className="absolute top-12 -right-4 bg-cyber-blue text-black text-[9px] font-black px-3 py-1 rotate-12 shadow-[5px_5px_0px_rgba(0,0,0,0.5)] z-30">
+                IDENTITY_SYNC: 100%
+              </div>
+              <div className="absolute bottom-12 -left-6 bg-cyber-purple text-white text-[9px] font-black px-3 py-1 -rotate-12 shadow-[5px_5px_0px_rgba(0,0,0,0.5)] z-30 tracking-widest">
+                CORE_LOGIC: STABLE
+              </div>
             </div>
 
             {/* Background Decorative Rings */}
@@ -82,20 +82,32 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex gap-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <span className="text-white">whoami</span>
                 </div>
-                <div className="text-slate-400 leading-[1.75]" style={{ fontFamily: 'var(--font-body)' }}>
-                  Passionate <span className="text-white font-semibold italic">Fullstack Developer</span> and 
-                  <span className="text-cyber-blue font-semibold"> Fresher</span> dedicated to building 
-                  high-performance digital systems. I specialize in bridging the gap between clean 
-                  architecture and cinematic user interfaces.
+                <div className="space-y-2" style={{ fontFamily: 'var(--font-body)' }}>
+                  <div className="text-white font-bold text-base tracking-tight">
+                    {"Passionate "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue to-cyber-purple">Fullstack Developer</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <div className="h-px flex-1 bg-gradient-to-r from-cyber-blue/60 via-cyber-purple/40 to-transparent"></div>
+                  </div>
+                  <div className="text-slate-400 text-[13px] leading-[1.8]">
+                    <div>{"▸ Dedicated to engineering high-performance digital systems."}</div>
+                    <div>
+                      {"▸ Specializing in "}
+                      <span className="text-cyber-blue font-semibold">clean architecture</span>
+                      {" + "}
+                      <span className="text-cyber-purple font-semibold">cinematic user interfaces</span>
+                      {"."}
+                    </div>
+                  </div>
                 </div>
 
                 <div className="flex gap-2 pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
                   <span className="text-white">access technical_matrix.json</span>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
                   <div>
                     <div className="text-cyber-purple font-bold text-[10px] uppercase mb-1 tracking-widest opacity-80">Languages</div>
@@ -114,8 +126,15 @@ const About = () => {
                   <div>
                     <div className="text-cyber-purple font-bold text-[10px] uppercase mb-1 tracking-widest opacity-80">System_Backend</div>
                     <div className="grid grid-cols-1 gap-1 text-cyber-blue/80 text-[13px]">
-                      <span>▸ Node.js / Express</span>
-                      <span>▸ MongoDB / NoSQL</span>
+                      <span>▸ Node.js</span>
+                      <span>▸ Express.js</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-cyber-purple font-bold text-[10px] uppercase mb-1 tracking-widest opacity-80">Database</div>
+                    <div className="grid grid-cols-1 gap-1 text-cyber-blue/80 text-[13px]">
+                      <span>▸ MongoDB</span>
+                      <span>▸ SQL</span>
                     </div>
                   </div>
                   <div>
@@ -129,16 +148,11 @@ const About = () => {
 
                 <div className="flex gap-2 pt-2">
                   <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <span className="text-white">echo $PHILOSOPHY</span>
+                  <span className="text-white">$PHILOSOPHY</span>
                 </div>
                 <div className="text-slate-400 italic text-[13px] border-l-2 border-white/10 pl-3">
-                  "Writing code is about creating systems that solve problems while feeling 
+                  "Writing code is about creating systems that solve problems while feeling
                   effortless to the user."
-                </div>
-                
-                <div className="flex gap-1 animate-pulse pt-2">
-                  <span className="text-cyber-green">guest@aviral-sys:~$</span>
-                  <div className="w-2.5 h-4 bg-cyber-blue shadow-[0_0_10px_rgba(0,242,255,0.7)]"></div>
                 </div>
               </div>
             </Terminal>
